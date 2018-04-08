@@ -1,0 +1,102 @@
+.search-wrapper {
+    width: 100%; height: 100%;
+    background: #fff;
+    .search-title {
+        width: 100%;
+        height: 0.5rem;
+        padding: 0 0.1rem;
+        .search {
+            width: e("calc(100% - 0.45rem)");
+            position: relative;
+            color: @font-gray;
+            .search-icon {
+                position: absolute;
+                left: 0.06rem;top: 50%;
+                transform: translateY(-50%);
+            }
+            input {
+                width: 100%;
+                height: 0.3rem;
+                border: none;
+                outline: none;
+                background: @bg-color;
+                text-indent: 0.3rem;
+                border-radius: 0.04rem;
+                font-size: 0.12rem;
+                color: #555;
+            }
+        }
+        .close, .search-btn {
+            z-index: 9;
+            color: @theme-blue;
+        }
+    }
+
+
+    .search-body-wrapper {
+        height: e("calc(100% - 0.5rem)");
+        overflow-y: scroll;
+        .search-container {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .guess {
+        .tip {
+            color: #ccc;
+            line-height: 0.35rem;
+            font-size: 0.1rem;
+            padding: 0 0.1rem;
+        }
+        .search-menu {
+            li {
+                width: e("calc(100% / 2)");
+                text-align: center;
+                line-height: 0.35rem;
+                font-size: 0.14rem;
+                color: #333;
+                &:before {
+                    border-top: none;
+                }
+
+            }
+            li:nth-child(2n) {
+                &:before {
+                    border-left: none;
+                }   
+            }
+        }
+    }
+    .search-box {
+        .item {
+            padding: 0.2rem 0.1rem;
+            h4 {
+                color: @font-normal;
+            }
+            p {
+                font-size: 0.16rem;
+                line-height: 0.2rem;
+                margin: 0.1rem 0;
+            }
+            .small-box {
+                >* {
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-size: 0.1rem;
+                    margin-right: 0.04rem;
+                    color: #999;
+                }
+            }
+        }
+        .item-l {
+            width: 70%;
+            padding-right: 10px;
+        }
+        .item-r {
+            width: 30%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

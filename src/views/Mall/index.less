@@ -1,0 +1,61 @@
+.record-wrapper{
+    .recommend {
+        background-color: #fff;
+        padding: 0.1rem;
+    }
+    .recommend-box {
+        .item {
+            width: 47%;
+            padding: 0.4rem 0;
+            background-color: #eee;
+            padding-left: 0.1rem;
+        }
+        h5 {
+            font-size: 0.2rem;
+            color: #333;
+        }
+        span {
+            font-size: 0.16rem;
+            color: #aaa;
+            line-height: 0.24rem;
+        }
+    }
+    h4 {
+        line-height: 0.4rem;
+    }
+    .box {
+        margin-top: 0.1rem;
+        padding-left: 0.1rem;
+        background: #fff;
+        &:before {
+            border-left: none;
+            border-right: none;
+        }
+        :last-child {
+            &:before {
+                border-bottom: none;
+            }
+        }
+
+        .li {
+            width: 100%;
+            height: 0.4rem;
+            font-size: 0.14rem;
+            color: #333;
+            padding-right: 0.1rem;
+        }
+        svg {
+            color: #bbb;
+        }
+        small {
+            color: @font-gray;
+            font-size: 0.12rem;
+        }
+    }
+    .tip {
+        text-align: center;
+        font-size: 0.12rem;
+        color: @font-gray;
+        margin-top: 0.2rem;
+    }
+}

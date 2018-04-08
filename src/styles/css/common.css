@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    /*touch-action: none;*/
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    background: #f4f4f4;
+    -webkit-tap-highlight-color: transparent;
+}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor; /* 通过设置 color 来改变 SVG 的颜色/fill */
+    overflow: hidden;
+}
+#container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+#nprogress .spinner {
+    display: none;
+}
+
+.animate-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.animate-wrapper>div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+  /*transform: translateX(-100%);*/
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: all 1000ms ease-in;
+  /*transform: translateX(0);*/
+}

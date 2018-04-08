@@ -1,0 +1,159 @@
+.headline-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    .header-container {
+        height: e("calc(100% - 0.4rem)");
+        .item {
+            padding-top: 0.1rem;
+        }
+        .item-t, .item-m {
+            padding: 0 0.1rem;
+        }
+        .item-t {
+            .item-t-l{
+                >* {
+                    display: inline-block;
+                    vertical-align: middle;
+                } 
+                .avatar {
+                    width: 0.4rem;
+                    height: 0.4rem;
+                    border-radius: 50%;
+                    margin-right: 0.08rem;
+                }
+                .name {
+                    color: #111;
+                }  
+                .info-box {
+                    color: @font-gray;
+                    font-size: 0.1rem;
+                }
+            }
+            .item-t-r {
+                font-size: 0.12rem;
+                .like-y {
+                    color: @font-gray;
+                }
+                .like-n {
+                    color: @theme-red;
+                }
+            }
+        }
+        .item-m {
+            padding-bottom: 0.1rem;
+            p {
+                line-height: 0.25rem;
+            }
+            .images {
+                margin-top: 0.04rem;
+                display: flex;
+                align-items: flex-start;
+                flex-wrap:wrap;
+                img {
+                    margin-top: 0.1rem;
+                }
+                .one {
+                    width: 50%;
+                }
+                .two {
+                    width: 40%;
+                    margin-right: 10%;
+                }
+                .three {
+                    width: 30%;
+                    margin-right: 3%;
+                }
+            }
+            span {
+                font-size: 0.1rem;
+                color: @font-gray;
+            }
+        }
+        .item-b {
+            .item-b-icon {
+                width: e("calc(100% / 3)");
+                height: 0.4rem;
+                text-align: center;
+                font-size: 0.14rem;
+                color: @font-gray;
+                span {
+                    margin-left: 0.08rem;
+                }
+            }
+            .item-b-icon-active {
+                color: @theme-red;
+            }
+        }
+    }
+
+    .headeline-top-bar {
+        .text-wrapper {
+            position: fixed;
+            width: 100%; height: 100%;
+            left: 0;top: 100%;
+            background-color: #fff;
+            z-index: 100;
+            transition: top .2s ease-out;
+            .title {
+                color: #333;
+                height: 0.4rem;
+                line-height: 0.4rem;
+                padding: 0 0.1rem;
+                font-size: 0.14rem;
+                
+                .t-disable {
+                    color: #ccc;
+                    pointer-events: none;
+                }
+                .t-active {
+                    color: @theme-blue;
+                    pointer-events: inherit;
+                }
+            }
+            .text-box {
+                width: 100%;
+                height: e("calc(100% - 0.5rem)");
+                textarea {
+                    width: 100%;
+                    height: 100%;
+                    padding: 0.1rem;
+                    font-size: 0.14rem;
+                    border: 1px solid transparent;
+                    outline: none;
+                    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+                }
+            }
+
+        }
+        
+        .text-active {
+            top: 0;
+        }
+
+        
+        .item {
+            width: e("calc(100% / 3)");
+            text-align: center;
+            font-size: 0.16rem;
+            height: 0.4rem;
+            line-height: 0.4rem;
+            >* {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            svg {
+                font-size: 0.2rem;
+            }
+        }
+        .item:nth-child(1) {
+            svg {color: @theme-blue;}
+        }
+        .item:nth-child(2) {
+            svg {color: @theme-green;}
+        }
+        .item:nth-child(3) {
+            svg {color: @theme-red;}
+        }
+    }
+}
