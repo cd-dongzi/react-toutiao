@@ -7,8 +7,21 @@ import connect from 'connect'
 export default class extends React.Component {
     skip = path => {
         const {state: {user: {user: {name}}}, showAlert, history} = this.props
-        history.slideStatus = 'left'
-        history.push(path)
+
+        // 是否登录
+        if (!name) {
+            showAlert({
+                content: '请先登录!',
+                success: () => {
+                    history.slideStatus = 'top'
+                    history.push('/login')
+                }
+            })
+        }else{
+           history.slideStatus = 'left'
+           history.push(path) 
+        }
+        
     }
     render () {
         return (

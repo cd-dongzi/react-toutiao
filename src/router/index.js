@@ -7,11 +7,12 @@ import GlobalComponents from 'components/GlobalComponents'
 import { css } from 'glamor'
 import AuthRoute from './authRoute'
 const renderRouteComponent = routes => routes.map( (route, index) => {
-    if (route.auth) { 
-        return <AuthRoute key={index} {...route}/>
-    } else {    
-        return <Route key={index} {...route}/>
-    }
+    // if (route.auth) { 
+    //     return <AuthRoute key={index} {...route}/>
+    // } else {    
+    //     return <Route key={index} {...route}/>
+    // }
+    return <Route key={index} {...route}/>
 })
 const NotLoyoutRouter = renderRouteComponent(notLoyoutRouterMap)
 const LoyoutRouter = renderRouteComponent(loyoutRouterMap)
