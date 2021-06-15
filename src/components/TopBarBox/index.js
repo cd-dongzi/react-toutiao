@@ -25,7 +25,7 @@ export default class extends React.Component {
                         {
                             newsList.map((news, index) => (
                                 <li className="fl" key={index} onClick={() => {delNews(news)}}>
-                                    <a href="javascript:;">{news.title}</a>
+                                    <span>{news.title}</span>
                                 </li>
                             ))
                         }
@@ -42,7 +42,7 @@ export default class extends React.Component {
                         {
                             allNewsList.map((news, index) => (
                                 <li className="fl" key={index} onClick={() => {addNews(news)}}>
-                                    <a href="javascript:;">{news.title}</a>
+                                    <span>{news.title}</span>
                                 </li>
                             ))
                         }

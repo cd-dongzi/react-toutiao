@@ -49,7 +49,7 @@ export default class extends React.Component {
                         }
                     </Swiper>
                 </div>
-                <a className="top-menu-more-btn df-c" href="javascript:void(0)" onClick={()=>{this.setState({isTopBarBox:true})}}><i className="list-shadow"></i><span className="cross"></span></a>
+                <div className="top-menu-more-btn df-c" onClick={()=>{this.setState({isTopBarBox:true})}}><i className="list-shadow"></i><span className="cross"></span></div>
                 
                 <TopBarBox className={isTopBarBox ? 'top-bar-active' : ''} closeBox={this.closeBox.bind(this)}/>
             </div>
