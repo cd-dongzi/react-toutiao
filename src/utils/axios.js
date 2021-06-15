@@ -4,7 +4,7 @@ import {store} from '../store'
 import {showAlert} from 'actions/common'
 axios.defaults.withCredentials = true 
 
-axios.defaults.baseURL = 'https://easy-mock.dzblog.cn/mock/60c8bd49c1222c237d4fc183/api'
+axios.defaults.baseURL = 'https://easy-mock.dzblog.cn/mock/60c8cf43a5cb582b4571ab2f/api'
 // 发送时
 axios.interceptors.request.use(config => {
     // 开始
@@ -42,12 +42,6 @@ function checkCode(res) {
     
     return res
 }
-
-// const baseURL = 'https://easy-mock.com/mock/5a6fe597a52f145df7e8a38a/apis/'
-// const baseURL = 'https://easy-mock.dzblog.cn/mock/60c8bd49c1222c237d4fc183/api'
-
-// 备用路径  
-// const baseURL = 'https://easy-mock.com/mock/5a83160c948cfd365a524088/apis/'
 export default {
     get(url, params) {
         if (!url) return
