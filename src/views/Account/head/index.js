@@ -28,7 +28,7 @@ export default class extends React.Component {
     }
     render () {
         const {infoList, resList} = this.state
-        const {user: {user}} = this.props.state
+        const {user: {user}, record: {types}} = this.props.state
         return (
             <section className="head-wrapper">
                 <div className="hd-t">
@@ -59,6 +59,9 @@ export default class extends React.Component {
                             <div className="hd-b-item df-c" key={index} onClick={e => {this.skipRecord(index)}}>
                                 <Icon iconName={v.icon}></Icon>
                                 <div className="hd-b-t">{v.title}</div>
+                                {
+                                    types[index] ? <div className="hd-b-count">{types[index].list.length}</div> : null
+                                }
                             </div>
                         ))
                     }
