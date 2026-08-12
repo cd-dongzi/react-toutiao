@@ -1,6 +1,26 @@
 .record-wrapper {
     width: 100%;
     height: 100%;
+    .record-actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 0.1rem;
+        height: 0.4rem;
+        background: #fff;
+        border-bottom: 1px solid #f1f1f1;
+    }
+    .record-actions__summary {
+        color: @font-gray;
+        font-size: 0.12rem;
+    }
+    .record-actions__btn {
+        border: none;
+        outline: none;
+        background: transparent;
+        color: @theme-red;
+        font-size: 0.12rem;
+    }
     .tabs {
         background-color: #fff;
         .tab {
@@ -18,7 +38,7 @@
     }
     .record-content {
         width: 100%;
-        height: e("calc(100% - 0.92rem)");
+        height: e("calc(100% - 1.32rem)");
         .swiper-box {
             width: 100%;
             height: 100%;
@@ -26,6 +46,13 @@
         .pullload-wrapper {
             width: 100%;
             height: e("calc(100% - 0.4rem)");
+        }
+        .record-empty {
+            min-height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
         }
         .tip {
             line-height: 0.4rem;
@@ -53,6 +80,20 @@
                     color: #999;
                 }
             }
+        }
+        .item-actions {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 0.12rem;
+        }
+        .item-remove {
+            border: none;
+            outline: none;
+            background: #fff5f5;
+            color: @theme-red;
+            border-radius: 0.12rem;
+            padding: 0.04rem 0.12rem;
+            font-size: 0.12rem;
         }
         .item-l {
             width: 70%;
